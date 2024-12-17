@@ -17,6 +17,16 @@ export class Novel extends AbstractEntity<Novel> {
   @Column()
   userId: number;
 
+  @Column()
+  Catagory:
+    | 'Fantasy'
+    | 'Mystery'
+    | 'Thriller'
+    | 'Romance'
+    | 'Horror'
+    | 'Historical'
+    | 'Drama';
+
   @ManyToOne(() => User, (user) => user.novels)
   user: User;
 

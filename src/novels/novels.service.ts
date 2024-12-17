@@ -13,6 +13,7 @@ export class NovelsService {
   async create(createNovelDto: CreateNovelDto) {
     const novel = new Novel(createNovelDto);
     await this.novelRepository.save(novel);
+    return novel;
   }
 
   findAll() {
